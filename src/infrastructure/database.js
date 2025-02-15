@@ -1,5 +1,4 @@
-const { Pool } = require('pg');  // Usamos 'require' en lugar de 'import'
-
+const { Pool } = require('pg');  
 const pool = new Pool({
     host: 'localhost',
     port: 5432,
@@ -8,5 +7,5 @@ const pool = new Pool({
     database: 'arquitecturalimpia',
 });
 
-// Cambiar 'export default' por 'module.exports'
+
 module.exports = pool;

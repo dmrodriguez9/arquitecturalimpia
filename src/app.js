@@ -1,5 +1,5 @@
 const express = require('express');
-const routes = require('./routes');  // Usa './routes' sin la extensión .js
+const routes = require('./routes');  
 
 const app = express();
 
