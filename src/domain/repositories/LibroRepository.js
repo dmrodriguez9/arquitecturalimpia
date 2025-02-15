@@ -14,5 +14,4 @@ class LibroRepository {
     }
 }
 
-// Cambiar 'export default' por 'module.exports'
 module.exports = new LibroRepository();

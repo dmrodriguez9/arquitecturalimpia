@@ -35,5 +35,4 @@ class AutorRepository {
     }
 }
 
-// Cambiar 'export default' por 'module.exports'
 module.exports = new AutorRepository();
