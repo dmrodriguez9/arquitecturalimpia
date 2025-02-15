@@ -1,4 +1,4 @@
-import { Pool } from 'pg';
+const { Pool } = require('pg');  // Usamos 'require' en lugar de 'import'
 
 const pool = new Pool({
     host: 'localhost',
@@ -8,4 +8,5 @@ const pool = new Pool({
     database: 'arquitecturalimpia',
 });
 
-export default pool;
+// Cambiar 'export default' por 'module.exports'
+module.exports = pool;

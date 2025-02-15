@@ -9,4 +9,4 @@ router.get('/libros', getLibros);
 router.post('/autores', createAutor);
 router.get('/autores', getAutores);
 
-module.exports = router;
+module.exports = router;  // Se exporta el router utilizando CommonJS

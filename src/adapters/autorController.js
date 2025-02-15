@@ -1,6 +1,6 @@
-import CreateAutor from '../use-cases/autor/CreateAutor.js';
-import GetAutores from '../use-cases/autor/GetAutores.js';
-import autorRepository from '../domain/repositories/AutorRepository.js';
+const CreateAutor = require('../use-cases/autor/CreateAutor');
+const GetAutores = require('../use-cases/autor/GetAutores');
+const autorRepository = require('../domain/repositories/AutorRepository');
 
 const createAutor = async (req, res) => {
     try {
@@ -22,4 +22,5 @@ const getAutores = async (req, res) => {
     }
 };
 
-export { createAutor, getAutores };
+// Se exporta utilizando CommonJS
+module.exports = { createAutor, getAutores };

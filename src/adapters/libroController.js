@@ -1,6 +1,7 @@
-import CreateLibro from '../use-cases/libro/CreateLibro.js';
-import GetLibros from '../use-cases/libro/GetLibros.js';
-import libroRepository from '../domain/repositories/LibroRepository.js';
+// Cambio de ES Module a CommonJS
+const CreateLibro = require('../use-cases/libro/CreateLibro');
+const GetLibros = require('../use-cases/libro/GetLibros');
+const libroRepository = require('../domain/repositories/LibroRepository');
 
 const createLibro = async (req, res) => {
     try {
@@ -22,4 +23,4 @@ const getLibros = async (req, res) => {
     }
 };
 
-export { createLibro, getLibros };
+module.exports = { createLibro, getLibros };  // Exportación con CommonJS

@@ -1,4 +1,4 @@
-import pool from '../../infrastructure/database.js';
+const pool = require('../../infrastructure/database');  
 
 class LibroRepository {
     async save(libro) {
@@ -14,5 +14,5 @@ class LibroRepository {
     }
 }
 
-export default new LibroRepository();
-
+// Cambiar 'export default' por 'module.exports'
+module.exports = new LibroRepository();
