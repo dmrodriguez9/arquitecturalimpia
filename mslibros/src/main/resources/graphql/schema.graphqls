@@ -1,0 +1,35 @@
+type Autor{
+    id: ID!
+    nombre: String!
+    apellido: String!
+    correo: String!
+    libro:[Libro!]
+}
+
+
+type Libro{
+    id: ID!
+    titulo: String!
+    anio: Int!
+    isbn: String!
+    autor: Autor!
+}
+
+type Query{
+    obtenerAutores:[Autor!]
+    obtenerAutorPorId(id:ID!): Autor
+
+    obtenerLibros: [Libro!] 
+    obtenerLibroPorId(id: ID!): Libro
+}
+
+
+type Mutation {
+    createAutor(nombre: String!, apellido: String!, correo: String!): Autor!
+    updateAutor(id: ID!, nombre: String!, apellido: String!, correo: String!): Autor!
+    deleteAutor(id: ID!): Boolean!
+
+    createLibro(idAutor: ID!, titulo: String!, anio: Int!, isbn: String!): Libro!
+    updateLibro(id: ID!, titulo: String!, anio: Int!, isbn: String!): Libro!
+    deleteLibro(id: ID!): Boolean!
+}
